@@ -8,9 +8,22 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 
+/**
+ * SET UP ROUTES
+ */
+
+//Ominbar routes
 var index = require('./routes/index');
-// Example route
-// var user = require('./routes/user');
+var help = require('./routes/help');
+var history = require('./routes/history');
+var payment = require('./routes/payment');
+var settings = require('./routes/settings');
+
+//Additional routes
+var cal = require('./routes/calendar');
+var map = require('./routes/map');
+var vehicle = require('./routes/vehicle');
+
 
 var app = express();
 
@@ -34,10 +47,22 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-// Add routes here
+/**
+ * RENDER ROUTES
+ */
+
+//Omnibar routes
 app.get('/', index.view);
-// Example route
-// app.get('/users', user.list);
+app.get('/payment', payment.view);
+app.get('/settings', settings.view);
+app.get('/help', help.view);
+app.get('/history', history.view);
+
+//Additional routes
+app.get('/calendar', cal.view);
+app.get('/map', map.view);
+app.get('/vehicle', vehicle.view);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

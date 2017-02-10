@@ -66,3 +66,19 @@ input:checked + .slider:before {
     height: 280px;
     font-size: 24px;
 }
+
+#omni {
+    font-size: 32px;
+}
+
+.active-opt {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.inactive-opt {
+    font-size: 20px;
+    font-weight: 300;
+    color: #808080;
+}
