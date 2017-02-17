@@ -70,6 +70,8 @@ app.get('/login', login.view);
 app.get('/confirmation', confirmation.view);
 app.get('/equipment', equipment.view);
 app.get('/request', request.view);
+
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
