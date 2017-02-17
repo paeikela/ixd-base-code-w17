@@ -1,0 +1,17 @@
+  .container1 {
+    border: 1px solid;
+    width: 280px;
+    margin: 5px;
+    float: left;
+}
+
+  .container {
+    border: 1px solid;
+    width: 280px;
+    margin: 5px;
+    float: left;
+}
+
+.header{
+	float:left;
+}
