@@ -24,6 +24,9 @@ var cal = require('./routes/calendar');
 var map = require('./routes/map');
 var vehicle = require('./routes/vehicle');
 var login = require('./routes/login');
+var confirmation = require('./routes/confirmation');
+var equipment = require('./routes/equipment');
+var request = require('./routes/request');
 
 
 var app = express();
@@ -64,8 +67,9 @@ app.get('/calendar', cal.view);
 app.get('/map', map.view);
 app.get('/vehicle', vehicle.view);
 app.get('/login', login.view);
-
-
+app.get('/confirmation', confirmation.view);
+app.get('/equipment', equipment.view);
+app.get('/request', request.view);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
