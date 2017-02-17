@@ -3,7 +3,7 @@ exports.view = function(req, res){
     res.render('login');
 
 };
-
+/*
 form {
 	border: 3px solid #f1f1f1;
 }
@@ -39,5 +39,6 @@ button{
 
 span.psw{
 	float:right;
-	padding-top: 16px;
+	padding-top:
 }
+**/
