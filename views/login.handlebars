@@ -1,13 +1,40 @@
 <html>
 <head>
     <title>WeHaul Demo</title>
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
+
+<body>
+
+    <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Username</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+  </body>
+
+
+
+<!--
 <body>
 
 <div class="col-md-5" style="text-align: middle;">
@@ -16,11 +43,11 @@
 
 <div class = "container" >
     <label><b>Username</b></label>
-    <input type = "text" placeholder = "Enter Username" name="uname" required> <!-- Can remove required-->
+    <input type = "text" placeholder = "Enter Username" name="uname" required> <!- Can remove required->
 
 
     <label><b>Password</b><label>
-    <input type ="password" placeholder = "Enter Password" name="psw" required> <!-- Can remove required-->
+    <input type ="password" placeholder = "Enter Password" name="psw" required> <!- Can remove required->
 
     <button type "submit">Login</button>
     
@@ -40,7 +67,7 @@
     <div class="col-sm-3"></div>
 </div>
 
-
+--> 
 
 
 <script src="js/jquery-3.1.1.min.js"></script>
