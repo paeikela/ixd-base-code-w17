@@ -1,8 +1,9 @@
   .container1 {
     border: 1px solid;
-    width: 280px;
+    width: 200px;
     left-margin: 500px;
     background-position: -100px;
+    font-size: 150%
 }
 
   .container {
