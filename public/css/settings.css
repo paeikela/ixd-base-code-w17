@@ -2,16 +2,16 @@
     border: 1px solid;
     width: 280px;
     margin: 5px;
-    float: left;
+    background-position: -100px;
 }
 
   .container {
     border: 1px solid;
     width: 280px;
     margin: 5px;
-    float: left;
+    background-position: -200px;
 }
 
 .header{
-	float:left;
-}
+	background-position: -300px;
+	}
