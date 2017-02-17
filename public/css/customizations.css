@@ -66,6 +66,11 @@ input:checked + .slider:before {
     height: 280px;
     font-size: 24px;
 }
+.loginbtn {
+    width: 100px;
+    height: 100;
+    font-size: 14px;
+}
 
 #omni {
     font-size: 32px;
