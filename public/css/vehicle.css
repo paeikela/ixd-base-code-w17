@@ -5,3 +5,8 @@ a {
     background-color:#ccc;
     border:1px solid #ff0000;
 }
+
+body {
+     border: 1px gray;
+     padding: 20px;
+}
