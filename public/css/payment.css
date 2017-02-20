@@ -7,4 +7,14 @@ form {
     width: 500px;
     margin: 5px;
     font-size: 180%;
+    position: relative;
+    text-align: center;
+}
+
+.update{
+	border: 1px solid dotted;
+	width: 500px;
+	margin: 5px;
+	position: relative;
+	text-align: center;
 }
