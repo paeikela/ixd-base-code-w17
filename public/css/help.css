@@ -2,12 +2,12 @@
     border: 1px solid;
     width: 550px;
     margin: 5px;
-    color: #42f498;
+    background-color: #42f498;
 }
 
 .header {
 	border: 1px;
 	width: 300px;
 	margin: 1px;
-	color: #f1f441;
+	background-color: #f1f441;
 }
