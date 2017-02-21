@@ -18,3 +18,9 @@ form {
 	position: relative;
 	text-align: center;
 }
+
+.name{
+	position: relative;
+	height: 20px;
+	border: 1px;
+}
