@@ -21,20 +21,29 @@ function projectClick(e) { 
 }
 
 function updateName(){
-	var person = prompt("Please enter your new name", "");
+	var name = prompt("Please enter your new name", "");
 
-	if(person!=null && person.length < 20){
-		document.getElementById("name").innerHTML = person;
+	if(name!=null && name.length < 20){
+		document.getElementById("name").innerHTML = name;
+		document.getElementById('errname').innerHTML="";
+	}
+	else{
+		document.getElementById('errname').innerHTML="Name must consist of less than 20 letters";
 	}
 }
 
 function updateCard(){
-	var card = prompt("Please enter your new scard#", "");
+	var card = prompt("Please enter your new card#", "");
 
-	if (card.length != 16){
-		document.getElementById('errfn').innerHTML="Card must consist of exactly 16 numbers";
+	if(isNaN(card)){
+		document.getElementById('errcard').innerHTML="Card must consist of only numbers";
 	}
-	else if(card!=null){
+	else if (card.length != 16){
+		document.getElementById('errcard').innerHTML="Card must consist of exactly 16 numbers";
+	}
+	else if (card!=null){
 		document.getElementById("card").innerHTML = card;
+				document.getElementById('errcard').innerHTML="";
+
 	}
 }
