@@ -18,25 +18,23 @@ function projectClick(e) { 
     // prevent the page from reloading      
     e.preventDefault();
 
-    window.prompt("Please enter your name","defaultText");
-    // In an event handler, $(this) refers to      
-    // the object that triggered the event      
-    $(this).css("background-color", "#7fff00");
-
 }
 
 function updateName(){
-	var person = prompt("Please enter your name", "");
+	var person = prompt("Please enter your new name", "");
 
-	if(person!=null){
+	if(person!=null && person.length < 20){
 		document.getElementById("name").innerHTML = person;
 	}
 }
 
 function updateCard(){
-	var card = prompt("Please enter your card#", "");
+	var card = prompt("Please enter your new scard#", "");
 
-	if(card!=null){
+	if (card.length != 16){
+		document.getElementById('errfn').innerHTML="Card must consist of exactly 16 numbers";
+	}
+	else if(card!=null){
 		document.getElementById("card").innerHTML = card;
 	}
 }

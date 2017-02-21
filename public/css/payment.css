@@ -25,3 +25,7 @@ form {
 	border: 1px;
 	font-size: 140%;
 }
+
+#errfn{
+	border: 1px solid red;
+}
