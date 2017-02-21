@@ -6,8 +6,8 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+
 	$("#update").click(function(e) {
-		$('#name').text("Javascript is connected");
 	});
 
 	// Add any additional listeners here
@@ -23,4 +23,20 @@ function projectClick(e) { 
     // the object that triggered the event      
     $(this).css("background-color", "#7fff00");
 
+}
+
+function updateName(){
+	var person = prompt("Please enter your name", "");
+
+	if(person!=null){
+		document.getElementById("name").innerHTML = person;
+	}
+}
+
+function updateCard(){
+	var card = prompt("Please enter your card#", "");
+
+	if(card!=null){
+		document.getElementById("card").innerHTML = card;
+	}
 }

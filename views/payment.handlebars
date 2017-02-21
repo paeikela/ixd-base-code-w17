@@ -35,32 +35,38 @@ text-align: center; width: 300px; ">
         <h2>Payment</h2>
 </div>
 
-    <div class="col-lg-8" style = "left: 30px; top: 12px;">
+    <div class="col-lg-8" style = "left: 30px; top: 50px;">
         <img src="graphics/visa.png" style="width: 12%;">
     </div>
 
- <div class="container" style ="left: 140px; top: 0px; height: 60px; line-height: 0;">
-        <p>
-            <b>Credit Card#: </b>
+<p style ="left: -710px; top: 11px; position: relative; font-size: 140%;">
+    <b>Credit Card#:</b>
+</p>
+
+ <div class="container" id = "card" style ="left: 140px; top: 0px; height: 60px; line-height: 1.8;">
+        <p id= "cardnumber">
             ••••••• 8743
         </p>
 </div>
 
-<div class = "name" style = "left: 145px; top: 30px; position: relative; width: 137px;">
+<div class ="update" id = "updatecard" style = "left: 265px; top: 0px; line-height: 1.4;">
+   <button onclick = "updateCard()"> <a href = "#1" >Update card?</a> </button>
+</div>
+
+<div class = "name" style = "left: 145px; top: 0px; position: relative; width: 137px;">
 <p>
     <b>Name on card:</b>
 </p>
 </div>
 
-<div class = "container" id = "name" style = "left: 140px; top: 30px;; height: 50px; line-height: 1.8;">
-    <p>
-    <button onclick = "myFunction()"> <a href = "#" >Update card?</a> </button>          
+<div class = "container" id = "name" style = "left: 140px; top: 0px; height: 50px; line-height: 1.8;">
+    <p>          
     </p>
 </div>
 
 <!-- ADD clicklistener -->
-<div class ="update" id = "update" style = "left: 265px; top: 30px; line-height: 1.4;">
-    <span class = "psw"> <a href = "#" >Update card?</a></span>
+<div class ="update" id = "updatename" style = "left: 265px; top: 0px; line-height: 1.4;">
+   <button onclick = "updateName()"> <a href = "#" >Update name?</a> </button>
 </div>
 
 <script src="js/jquery-3.1.1.min.js"></script>
