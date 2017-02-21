@@ -1,6 +1,7 @@
 .container {
     border: 3px solid transparent;
     width: 550px;
+    height: px;
     margin: 5px;
     background-color: #42f498;
     line-height: 0.9;
