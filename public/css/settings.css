@@ -9,6 +9,15 @@
   .container {
     border: 1px solid;
     width: 200px;
+    height: 52px;
     margin: 5px;
     background-position: -200px;
+}
+
+#errname{
+    color: red;
+}
+
+#erraddress{
+    color: red;
 }

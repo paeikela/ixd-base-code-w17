@@ -1,6 +1,3 @@
-/**
- * Created by Liam on 2/16/2017.
- */
 'use strict';
 
 $(document).ready(function() {
@@ -8,11 +5,11 @@ $(document).ready(function() {
 });
 
 function initPage() {
-    $("#submitBtn").click(addRide);
-    //if("window.history.forward()" === )
+    $("#confirmBtn").click(confirm);
+    $("#backBtn").click(back);
 }
 
-function addRide(e) {
+function confirm(e) {
     e.preventDefault();
 
     $.post("/movenow-driver",
@@ -22,17 +19,15 @@ function addRide(e) {
             "end": $("#destination").val(),
             "distance": (Math.round(Math.random() * 20)) / 10,
             "pic": "http://lorempixel.com/400/400/people"
-        },
-        /*if("name" =null || "start"=null || "end"||null){
-            document.getElementById('error').innerHTML="All fields must contain valid inputs";
-        }else{ */
-            addedRide);
-    //}
+        }, confirmed);
 }
 
-function addedRide(data) {
-    window.location.href = "movenow-rider-submitted";
+function confirmed(data) {
+    window.location.href = "confirmation";
     //$('.alert').show();
     //alert.alert();
 }
 
+function back(e){
+    window.location.href = "equipment";
+}

@@ -10,3 +10,23 @@ body {
      border: 1px gray;
      padding: 20px;
 }
+
+.container{
+	position: relative;
+	float: center;
+	left: 450px;
+}
+
+.block{
+	display: block;
+}
+
+.header{
+	position: absolute;
+	float: right;
+	left: 50px;
+}
+
+.vertical{
+	margin: 20px;
+}
