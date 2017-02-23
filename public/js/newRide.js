@@ -14,7 +14,15 @@ function initPage() {
 
 function addRide(e) {
     e.preventDefault();
-
+    if(#name.length=null){
+        console.log("name");
+    } 
+    else if("location".length=null){
+        console.log("location");
+    }
+    else if(destination.length=null){
+        console.log("destination");
+    }else{
     $.post("/movenow-driver",
         {
             "name": $("#name").val(),
@@ -27,7 +35,8 @@ function addRide(e) {
             document.getElementById('error').innerHTML="All fields must contain valid inputs";
         }else{ */
             addedRide);
-    //}
+    }
+
 }
 
 function addedRide(data) {
