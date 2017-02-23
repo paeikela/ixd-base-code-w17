@@ -10,20 +10,13 @@ $(document).ready(function() {
 function initPage() {
     $("#submitBtn").click(addRide);
     //if("window.history.forward()" === )
+    //do a submit
 }
 
 function addRide(e) {
-    e.preventDefault();
-    if(#name.length=null){
-        console.log("name");
-    } 
-    else if("location".length=null){
-        console.log("location");
-    }
-    else if(destination.length=null){
-        console.log("destination");
-    }else{
-    $.post("/movenow-driver",
+    if($("#name").val()!=="" && $("#location").val()!=="" && $("#destination").val()!==""){
+        console.log("before post");
+      $.post("/movenow-driver",
         {
             "name": $("#name").val(),
             "start": $("#location").val(),
@@ -31,9 +24,6 @@ function addRide(e) {
             "distance": (Math.round(Math.random() * 20)) / 10,
             "pic": "http://lorempixel.com/400/400/people"
         },
-        /*if("name" =null || "start"=null || "end"||null){
-            document.getElementById('error').innerHTML="All fields must contain valid inputs";
-        }else{ */
             addedRide);
     }
 
