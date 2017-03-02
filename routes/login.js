@@ -1,44 +1,62 @@
+var models = require("../models");
+var userInfo = require("../userInfo.json");
 // Login screen
 exports.view = function(req, res){
-    res.render('login');
-
+    res.render('login', { "status": "warningHidden" });
 };
-/*
-form {
-	border: 3px solid #f1f1f1;
-}
 
-input[type=text], input[type=password]{
-	width: 100%
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc
-	box-sizing: border-box
-}
+exports.register = function(req, res) {
+    res.render('register', { "status": "warningHidden" });
+};
 
-button{
-	background-color:#4CAF50;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	cursor: pointer;
-	width: 100%;
-}
+exports.createUser = function(req, res) {
+    var info = req.body;
 
-.cancelbtn{
-	width: auto;
-	padding: 10px 18px;
-	background-color: #f44336;
-}
+    //See if user registered with an already-registered email
+    models.user
+        .find({"email": info.email})
+        .exec(badEmail);
 
-.container{
-	padding: 16px;
-}
+    function badEmail(err, users) {
+        if(err) { console.log(err); res.send(500); }
+        console.log(users);
+        console.log(users.length);
+        if(users.length != 0) {
+            res.render('register', { "status": "warningShow" });
+        } else {
+            var newUser = new models.user({
+                "name": info.name,
+                "email": info.email,
+                "password": info.password,
+                "home": ""
+            });
+            userInfo.name = newUser.name;
+            newUser.save(addNewUser);
+        }
+    }
 
-span.psw{
-	float:right;
-	padding-top:
-}
-**/
+    function addNewUser(err) {
+        if(err) { console.log(err); res.send(500); }
+        res.end();
+    }
+};
+
+exports.login = function(req, res) {
+    var info = req.body;
+    models.user
+        .find({"email": info.email})
+        .exec(checkPassword);
+    function checkPassword(err, users) {
+        if(err) { console.log(err); res.send(500); }
+        if(users[0]) {
+            if(users[0].password != info.password) {
+                res.send("bad");
+            } else {
+                userInfo.name = users[0].name;
+                res.send(users[0]._id);
+            }
+        } else {
+            res.send("bad");
+        }
+    }
+};

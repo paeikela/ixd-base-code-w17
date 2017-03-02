@@ -1,24 +1,25 @@
 .container {
     border: 3px solid transparent;
-    width: 550px;
-    height: px;
+    width: 250px;
+    height: 250px;
     margin: 5px;
-    background-color: #42f498;
+    background-color: #C0D461;
     line-height: 0.9;
     position: relative;
     text-align: center;
 }
 
 .header {
-	border: 1px;
-	margin: 1px;
-	background-color: #f1f441;
-	font-size: 40px;
+	border:;
+	margin:;
+	background-color:;
+	color: #66a182;
+	font-size: 25px;
 	position: relative;
 	text-align: center;
 }
 
 .background{
-	background-color: grey;
+	background-color: #0A2E36;
 	position: relative;
 }

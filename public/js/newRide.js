@@ -34,4 +34,3 @@ function addedRide(data) {
     //$('.alert').show();
     //alert.alert();
 }
-

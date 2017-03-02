@@ -78,3 +78,11 @@ span.psw{
     float:right;
     padding-top:
 }*/
+
+.warningShow {
+  visibility: visible;
+}
+
+.warningHidden {
+  visibility: hidden;
+}

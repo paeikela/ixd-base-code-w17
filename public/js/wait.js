@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
 function initializePage() {
-	timer = setTimeout(back, 5000);
+	timer = setTimeout(back, 3000);
 }
 
 function back(){
